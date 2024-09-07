@@ -32,11 +32,12 @@
   "browserslist": [
     "last 2 versions",
     "not dead",
-    "not chrome < 90",
-    "not edge < 90",
-    "not firefox < 90",
-    "not safari < 14"
+    "not chrome < 93",
+    "not edge < 93",
+    "not firefox < 93",
+    "not safari < 15"
   ],
+
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",

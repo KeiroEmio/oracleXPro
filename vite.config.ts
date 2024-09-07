@@ -1,9 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import topLevelAwait from "vite-plugin-top-level-await";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    topLevelAwait()  // 添加 top-level await 插件
+  ],
   resolve: {
     alias: {
       crypto: "empty-module",
@@ -25,15 +28,17 @@ export default defineConfig({
     global: "globalThis",
   },
   build: {
-    target: 'esnext',  // 使用最新的 JavaScript 特性
-    minify: 'esbuild',
+    target: 'esnext',
     rollupOptions: {
       output: {
-        manualChunks: undefined,  // 使所有代码打包到一个文件
+        manualChunks: undefined,
       },
     },
   },
   esbuild: {
-    target: 'ES2022',  // 确保 esbuild 使用最新的 JS 特性
-  }
+    target: 'esnext',
+    supported: {
+      'top-level-await': true,  // 明确支持 top-level await
+    },
+  },
 });
