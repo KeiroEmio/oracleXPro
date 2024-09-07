@@ -81,5 +81,6 @@
   },
   "esbuild": {
     "target": "esnext"
-  }
+  },
+  "packageManager": "pnpm@7.x"
 }
