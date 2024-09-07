@@ -8,9 +8,11 @@
       }
     }
   ],
-
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ],
   "build": {
     "env": {
@@ -18,5 +20,4 @@
     }
   },
   "outputDirectory": "build"
-
 }

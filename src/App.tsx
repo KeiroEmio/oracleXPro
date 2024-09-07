@@ -13,6 +13,9 @@ import Transaction from "./pages/Transaction";
 import { Playground } from "./services/playground";
 import web3AuthContextConfig from "./services/web3authContext";
 import PloyMarketHome from "./pages/PolyMarket/home";
+import Politics from "./pages/PolyMarket/Politics"
+import Crypto from "./pages/PolyMarket/Crypto"
+import Sports from "./pages/PolyMarket/Sports"
 
 function App() {
   return (
@@ -29,8 +32,9 @@ function App() {
                   <Route path="server-side-verification" element={<ServerSideVerification />} />
                   {/* PloyMarketHome */}
                   <Route path="polyMarket-home" element={<PloyMarketHome />}>
-                    {/*<Route path="sub-one" element={<SubComponentOne />} />*/}
-                    {/*<Route path="sub-two" element={<SubComponentTwo />} />*/}
+                    <Route path="politics" element={<Politics />} />
+                    <Route path="sports" element={<Sports />} />
+                    <Route path="crypto" element={<Crypto />} />
                   </Route>
                 </Route>
               </Routes>

@@ -1,5 +1,6 @@
 {
   "name": "react-modal-playground",
+  "home": ".",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -17,7 +18,7 @@
     "@web3auth/solana-provider": "^8.12.2",
     "@web3auth/wallet-services-plugin-react-hooks": "^8.12.3",
     "antd": "^5.20.5",
-    "ethers": "^6.9.0",
+    "ethers": "^6.13.2",
     "hamburger-react": "^2.5.0",
     "jose": "^5.2.4",
     "react": "^18.3.1",
