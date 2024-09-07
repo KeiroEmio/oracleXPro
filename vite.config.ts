@@ -34,9 +34,6 @@ export default defineConfig({
     },
   },
   esbuild: {
-    target: 'esnext',  // 确保 esbuild 使用最新的 JS 特性
-    supported: {
-      'top-level-await': true,  // 明确支持 Top-level await
-    }
+    target: 'ES2022',  // 确保 esbuild 使用最新的 JS 特性
   }
 });
