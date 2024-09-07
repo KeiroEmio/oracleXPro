@@ -29,19 +29,14 @@
     "vite": "^5.3.5",
     "web3": "^4.9.0"
   },
-  "browserslist": {
-    "production": [
-      "last 2 chrome versions",
-      "last 2 firefox versions",
-      "last 2 edge versions",
-      "last 2 safari versions"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not chrome < 90",
+    "not edge < 90",
+    "not firefox < 90",
+    "not safari < 14"
+  ],
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
@@ -82,5 +77,8 @@
   "esbuild": {
     "target": "esnext"
   },
-  "packageManager": "pnpm@7.x"
+  "packageManager": "pnpm@7.x",
+  "engines": {
+    "node": ">=16.0.0"
+  }
 }

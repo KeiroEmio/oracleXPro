@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -24,15 +25,18 @@ export default defineConfig({
     global: "globalThis",
   },
   build: {
-    target: 'esnext',  // 保持使用最新的 ES 标准
+    target: 'esnext',  // 使用最新的 JavaScript 特性
+    minify: 'esbuild',
     rollupOptions: {
       output: {
-        manualChunks: undefined,
+        manualChunks: undefined,  // 使所有代码打包到一个文件
       },
     },
-    minify: 'esbuild', // 使用 esbuild 进行最小化
   },
   esbuild: {
-    target: 'esnext'  // 让 esbuild 也使用 esnext 进行构建
+    target: 'esnext',  // 确保 esbuild 使用最新的 JS 特性
+    supported: {
+      'top-level-await': true,  // 明确支持 Top-level await
+    }
   }
 });
