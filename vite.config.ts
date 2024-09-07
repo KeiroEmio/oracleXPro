@@ -26,5 +26,6 @@ export default defineConfig({
   },
   build: {
     target: "esnext", // 支持现代浏览器和 Top-level await
+    outDir: "build",
   },
 });
