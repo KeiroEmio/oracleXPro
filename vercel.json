@@ -18,5 +18,6 @@
     "env": {
       "NODE_VERSION": "18.x"
     }
-  }
+  },
+  "outputDirectory": "dist"
 }
