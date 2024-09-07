@@ -6,10 +6,7 @@
       "@web3auth/*-adapter": ["./packages/adapters/*-adapter"],
       "@web3auth/*-provider": ["./packages/providers/*-provider"],
       "@web3auth/*": ["./packages/*"],
-      "@web3auth/*-plugin": ["./packages/plugins/*-plugin"],
-      "target": ["./es2020"],     // 确保目标是 es2020 或更高
-      "module": ["./esnext"],     // 使用现代的模块系统
-      "lib": ["./esnext", "./dom"]  // 确保使用了包含 async/await 的库
+      "@web3auth/*-plugin": ["./packages/plugins/*-plugin"]
     }
   }
 }
