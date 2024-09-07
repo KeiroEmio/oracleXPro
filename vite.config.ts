@@ -1,8 +1,4 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-// https://vitejs.dev/config/
 export default defineConfig({
-  // plugins: [react()],
   plugins: [react()],
   resolve: {
     alias: {
@@ -21,12 +17,19 @@ export default defineConfig({
       _stream_transform: "empty-module",
     },
   },
-
   define: {
     global: "globalThis",
   },
-
   build: {
-    target: 'esnext'
+    target: 'esnext',  // 保持使用最新的 ES 标准
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+    minify: 'esbuild', // 使用 esbuild 进行最小化
+  },
+  esbuild: {
+    target: 'esnext'  // 让 esbuild 也使用 esnext 进行构建
   }
 });
