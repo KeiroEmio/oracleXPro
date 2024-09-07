@@ -1,11 +1,17 @@
 {
   "builds": [
     {
-      "src": "src/index.js",
-      "use": "@vercel/node",
+      "src": "package.json",
+      "use": "@vercel/static-build",
       "config": {
-        "nodeVersion": "20.16.0"
+        "distDir": "build"
       }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
