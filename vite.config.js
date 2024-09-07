@@ -23,5 +23,9 @@ export default defineConfig({
     define: {
         global: "globalThis",
     },
+    build: {
+        target: "esnext", // 支持现代浏览器和 Top-level await
+        outDir: "build",
+    },
 });
 //# sourceMappingURL=vite.config.js.map
