@@ -17,6 +17,6 @@
       "NODE_VERSION": "18.x"
     }
   },
-  "outputDirectory": "build",
+  "outputDirectory": "build"
 
 }
